@@ -31,3 +31,8 @@ def showPlot(xlim=(-5, 5), ylim=(-5, 5), legend=True):
     plt.ylabel('Y-axis')
     plt.title('Vector Plot')
     plt.show()
+
+def test():
+    v = np.array([[1], [2]])
+    plot_vector(v)
+    showPlot()
