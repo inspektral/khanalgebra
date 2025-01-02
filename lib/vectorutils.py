@@ -16,7 +16,16 @@ def plot_vector(v, ref=(0,0), label="vector", color='r') :
     plt.quiver(ref[0], ref[1], v[0], v[1], angles='xy', scale_units='xy', scale=1, color=color, label=label)
 
 
-def showPlot(xlim=(-5, 5), ylim=(-5, 5), legend=True):
+def showPlot(xlim=(-5, 5), ylim=(-5, 5), legend=True, title='Vector Plot'):
+
+    '''
+    Show the plot with the given limits and legend
+    xlim: tuple (xmin, xmax)
+    ylim: tuple (ymin, ymax)
+    legend: boolean
+    title: string
+    '''
+
     plt.axhline(0, color='black',linewidth=0.5)
     plt.axvline(0, color='black',linewidth=0.5)
 
@@ -29,7 +38,7 @@ def showPlot(xlim=(-5, 5), ylim=(-5, 5), legend=True):
         plt.legend()
     plt.xlabel('X-axis')
     plt.ylabel('Y-axis')
-    plt.title('Vector Plot')
+    plt.title(title)
     plt.show()
 
 def test():
